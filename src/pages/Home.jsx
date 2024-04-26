@@ -1,8 +1,10 @@
+import TouristSpot from "../components/TouristSpot";
 
 const Home = () => {
     return (
-        <div>
+        <div className="spotContainer">
             <h1>This is Home</h1>
+            <TouristSpot/>
         </div>
     );
 };

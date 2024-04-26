@@ -4,7 +4,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
 import useAuth from "../hooks/useAuth";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { updateProfile } from "firebase/auth";
 
 const Register = () => {
@@ -108,7 +108,7 @@ const Register = () => {
           <button className="btn bg-[#FA7436] text-white">Sign Up</button>
         </div>
         <p className="px-6 text-sm text-center dark:text-gray-600">Already have an account? 
-				<a rel="noopener noreferrer" href="#" className="hover:underline text-[#FA7436]">Sign in</a>.
+				<Link to="/login"  className="hover:underline text-[#FA7436]">Sign in</Link>.
 			</p>
       </form>
     </div>

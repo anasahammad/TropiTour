@@ -15,8 +15,23 @@ const AllTouristSpot = () => {
             setAllSpots(data)
         })
     }, [])
+
+    const handleSort = (e)=>{
+        if(e.target.value === "avgCost" ){
+            let sortSpot =[...allSpots].sort((a, b)=> a.avgCost - b.avgCost)
+            setAllSpots(sortSpot)
+        }
+    }
     return (
         <div className="spotContainer">
+
+<div className="text-center my-8">
+<select onChange={handleSort}  className="select select-ghost w-full max-w-xs border-2  border-red-600 focus:border-[#FA7436]">
+  <option disabled selected>Find a Spot by avarage low cost</option>
+  <option value="avgCost">Avarage Cost</option>
+  
+</select>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                 {
                     allSpots.map(spot=><div key={spot?._id} className="max-w-xs p-6 rounded-md shadow-md dark:bg-gray-50 dark:text-gray-900">

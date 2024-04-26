@@ -3,13 +3,14 @@ import useAuth from "../hooks/useAuth";
 import { GrEdit } from "react-icons/gr";
 import { RiDeleteBinFill } from "react-icons/ri";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const MyList = () => {
     const {user}= useAuth() || {}
     const [list, setList] = useState([])
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/myList/${user?.email}`)
+        fetch(`http://localhost:5000/myList/${user?.email}`,)
         .then(res=>res.json())
         .then(data=>{
             setList(data)
@@ -17,7 +18,7 @@ const MyList = () => {
     }, [user])
     console.log(list);
 
-    
+
     const handleDelete = id=>{
         const swalWithBootstrapButtons = Swal.mixin({
             customClass: {
@@ -65,7 +66,7 @@ const MyList = () => {
             ) {
               swalWithBootstrapButtons.fire({
                 title: "Cancelled",
-                text: "Your imaginary file is safe :)",
+                html: "Your file will not be delete! 😊",
                 icon: "error"
               });
               
@@ -77,7 +78,7 @@ const MyList = () => {
             
             
             <div className="container p-2 mx-auto sm:p-4 dark:text-gray-800">
-	<h2 className="mb-4 text-2xl font-semibold leading-tight">Contacts</h2>
+	<h2 className="mb-4 text-2xl font-semibold leading-tight text-center">My Tourist Spot added summary</h2>
 	<div className="overflow-x-auto">
 		<table className="w-full p-6 text-xs text-left whitespace-nowrap">
 			<colgroup>
@@ -114,7 +115,7 @@ const MyList = () => {
 						<p>${item.avgCost}</p>
 					</td>
 					<td className="px-3 py-2">
-						<p className="cursor-pointer text-xl"><GrEdit/></p>
+						<Link to={`/spots-update/${item._id}`} className="cursor-pointer text-xl"><GrEdit/></Link>
 					</td>
 					<td className="px-3 py-2">
 						<button onClick={()=>handleDelete(item._id)} className="dark:text-gray-600 text-xl text-red-500 cursor-pointer"><RiDeleteBinFill/></button>

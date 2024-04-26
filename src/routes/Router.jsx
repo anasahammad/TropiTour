@@ -10,6 +10,7 @@ import MyList from "../pages/MyList";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import SpotDetails from "../components/SpotDetails";
+import UpdateSpot from "../components/UpdateSpot";
 
   export const router = createBrowserRouter([ 
     { 
@@ -43,6 +44,11 @@ import SpotDetails from "../components/SpotDetails";
         {
             path: "/spot-details/:id",
             element: <SpotDetails/>,
+            loader: ({params})=> fetch(`http://localhost:5000/spots/${params.id}`)
+        },
+        {
+            path:"/spots-update/:id",
+            element: <UpdateSpot/>,
             loader: ({params})=> fetch(`http://localhost:5000/spots/${params.id}`)
         }
     ]

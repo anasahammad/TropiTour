@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import useAuth from "../hooks/useAuth";
 import { GrEdit } from "react-icons/gr";
 import { RiDeleteBinFill } from "react-icons/ri";
+import Swal from "sweetalert2";
 
 const MyList = () => {
     const {user}= useAuth() || {}
@@ -15,6 +16,62 @@ const MyList = () => {
         })
     }, [user])
     console.log(list);
+
+    
+    const handleDelete = id=>{
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+              confirmButton: "btn btn-success",
+              cancelButton: "btn btn-danger"
+            },
+            buttonsStyling: false
+          });
+          swalWithBootstrapButtons.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Yes, delete it!",
+            cancelButtonText: "No, cancel!",
+            reverseButtons: true
+          }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/myList/${id}`, {
+                    method: "DELETE"
+                })
+                .then(res=>res.json())
+                .then(data=>{
+                    console.log(data)
+                    
+                    if(data.deletedCount > 0){
+                       const remaining = list.filter(item=> item._id !== id)
+                       setList(remaining)
+                       swalWithBootstrapButtons.fire({
+                        title: "Deleted!",
+                        text: "Your file has been deleted.",
+                        icon: "success"
+                      });
+                    }
+                    else{
+                        setList(list)
+                    }
+                   
+                })
+              
+            
+            } else if (
+              /* Read more about handling dismissals below */
+              result.dismiss === Swal.DismissReason.cancel
+            ) {
+              swalWithBootstrapButtons.fire({
+                title: "Cancelled",
+                text: "Your imaginary file is safe :)",
+                icon: "error"
+              });
+              
+            }
+          });
+    }
     return (
         <div>
             
@@ -37,7 +94,7 @@ const MyList = () => {
 					<th className="p-3">Spot Name</th>
 					<th className="p-3">Country</th>
 					<th className="p-3">Location</th>
-					<th className="p-3">Total Visitors Per Year</th>
+					<th className="p-3">Avarage Cost/Year</th>
 					<th className="p-3">Update</th>
 					<th className="p-3">Delete</th>
 					
@@ -54,13 +111,13 @@ const MyList = () => {
 						<p className="dark:text-gray-600">{item.location}</p>
 					</td>
 					<td className="px-3 py-2">
-						<p>{item.totalVisitors}</p>
+						<p>${item.avgCost}</p>
 					</td>
 					<td className="px-3 py-2">
 						<p className="cursor-pointer text-xl"><GrEdit/></p>
 					</td>
 					<td className="px-3 py-2">
-						<p className="dark:text-gray-600 text-xl text-red-500 cursor-pointer"><RiDeleteBinFill/></p>
+						<button onClick={()=>handleDelete(item._id)} className="dark:text-gray-600 text-xl text-red-500 cursor-pointer"><RiDeleteBinFill/></button>
 					</td>
 					
 				</tr>

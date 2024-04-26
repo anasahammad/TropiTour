@@ -165,7 +165,7 @@ const Navbar = () => {
 
 
    
-   <button className="  md:hidden lg:hidden">
+   <button className=" p-4 md:hidden lg:hidden">
 			
     <div className="dropdown dropdown-bottom dropdown-end">
 <div tabIndex={0} role="button" className="btn m-1"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-gray-800">

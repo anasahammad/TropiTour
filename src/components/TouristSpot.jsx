@@ -25,7 +25,7 @@ const TouristSpot = () => {
             <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 
                 {
-                    allSpots.map(spot=><div key={spot._id} className="card  my-6 card-compact  bg-base-100 shadow-xl">
+                    allSpots.slice(0, 6).map(spot=><div key={spot._id} className="card  my-6 card-compact  bg-base-100 shadow-xl">
                     <figure><img src={spot?.imageURL} alt={spot?.spotName} className="h-[313px]" /></figure>
                     <div className="card-body flex-grow">
                      
@@ -68,7 +68,9 @@ const TouristSpot = () => {
                           <div className="divider"></div>
                   
                           <div className="flex justify-center items-center flex-grow">
+                            <Link to={`/spot-details/${spot?._id}`}>
                               <button className="btn bg-[#FA7436] text-white">View Details</button>
+                            </Link>
                           </div>
                     </div>
                   </div> )

@@ -9,6 +9,7 @@ import AddTouristSpot from "../pages/AddTouristSpot";
 import MyList from "../pages/MyList";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import SpotDetails from "../components/SpotDetails";
 
   export const router = createBrowserRouter([ 
     { 
@@ -28,7 +29,7 @@ import Register from "../pages/Register";
             element: <AddTouristSpot/>
         },
         {
-            path: "/my-list",
+            path: "/myList",
             element: <MyList/>
         },
         {
@@ -38,6 +39,11 @@ import Register from "../pages/Register";
         {
             path: "/register",
             element: <Register/>
+        },
+        {
+            path: "/spot-details/:id",
+            element: <SpotDetails/>,
+            loader: ({params})=> fetch(`http://localhost:5000/spots/${params.id}`)
         }
     ]
     }, 

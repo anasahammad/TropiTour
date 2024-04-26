@@ -65,7 +65,7 @@ const AllTouristSpot = () => {
                           </div>
 
                           <div className="my-3 flex-grow">
-                            <Link>
+                            <Link to={`/spot-details/${spot?._id}`}>
                             <button className="btn bg-[#FA7436] text-white rounded-xl">View Details</button>
                             </Link>
                           </div>

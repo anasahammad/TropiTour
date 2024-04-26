@@ -1,9 +1,65 @@
-
+import { useEffect, useState } from "react";
+import { HiOutlineCalendarDays } from "react-icons/hi2";
+import { MdPeopleOutline } from "react-icons/md";
+import loadingImg from "../assets/images/images.png"
+import { TbCalendarTime } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 const AllTouristSpot = () => {
+    const [allSpots, setAllSpots] = useState([])
+
+    useEffect(()=>{
+        fetch('http://localhost:5000/spots')
+        .then(res=> res.json())
+        .then(data=> {
+            setAllSpots(data)
+        })
+    }, [])
     return (
-        <div>
-            <h1>This is all tourist spot</h1>
+        <div className="spotContainer">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                {
+                    allSpots.map(spot=><div key={spot?._id} className="max-w-xs p-6 rounded-md shadow-md dark:bg-gray-50 dark:text-gray-900">
+                    <img src={spot?.imageURL} alt={spot?.spotName} className="object-cover object-center w-full rounded-md h-72 dark:bg-gray-500" />
+                    <div className="mt-6 mb-2">
+                        
+                    <div className="flex flex-col md:flex-row lg:flex-row justify-between">
+                          <div className=" flex items-center gap-2 text-[#7D7D7D]">
+                              <HiOutlineCalendarDays/>
+                              <h4>{spot?.travelTime}</h4>
+                          </div>
+                          <div className=" flex items-center gap-2 text-[#7D7D7D]">
+                              <MdPeopleOutline/>
+                              <h4>Total visit : {spot?.totalVisitors}/Year</h4>
+                          </div>
+
+                      </div>
+
+                      <div className="my-3">
+                          <h1 className="text-2xl font-bold ">{spot?.spotName}</h1>
+                      </div>
+
+                      
+                      <div className="flex flex-col md:flex-row lg:flex-row justify-between">
+                              <h1 className="text-3xl text-[#FA7436] font-bold">${spot?.avgCost}/avg</h1>
+                              <div className="flex items-center gap-2 text-[#7D7D7D] text-xl ">
+                                  <TbCalendarTime/>
+                                  <h2 >{spot?.seasonality}</h2>
+                              </div>
+                              
+                          </div>
+
+                          <div className="my-3 flex-grow">
+                            <Link>
+                            <button className="btn bg-[#FA7436] text-white rounded-xl">View Details</button>
+                            </Link>
+                          </div>
+                    </div>
+                   
+                </div>)
+                }
+            </div>
+            
         </div>
     );
 };

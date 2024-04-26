@@ -4,6 +4,7 @@ import { MdPeopleOutline } from "react-icons/md";
 import { FaGlobeAmericas } from "react-icons/fa";
 import { TbCalendarTime } from "react-icons/tb";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 const TouristSpot = () => {
     const [allSpots, setAllSpots] = useState([])
 
@@ -18,14 +19,14 @@ const TouristSpot = () => {
     return (
         <div className=" ">
             <div className="flex justify-center font-poppins">
-                <h1 className="text-5xl ligth:text-[#222] font-bold dark:text-white">The <span className="text-[#FA7436]"> best tourist spot</span> for vacation</h1>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl ligth:text-[#222] font-bold dark:text-white">The <span className="text-[#FA7436]"> best tourist spot</span> for vacation</h1>
             </div>
 
             <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 
                 {
                     allSpots.map(spot=><div key={spot._id} className="card  my-6 card-compact  bg-base-100 shadow-xl">
-                    <figure><img src={spot?.imageURL} alt="Shoes" className="h-[313px]" /></figure>
+                    <figure><img src={spot?.imageURL} alt={spot?.spotName} className="h-[313px]" /></figure>
                     <div className="card-body flex-grow">
                      
                   
@@ -75,7 +76,14 @@ const TouristSpot = () => {
             
             </div>
            
-
+           {
+            allSpots.length > 6 &&  <div className="flex justify-center items-center">
+            <Link to="/all-tourist-spot">
+            <button className="btn bg-[#FA7436] text-white">See More</button>
+            </Link>
+        </div>
+           }
+               
         </div>
     );
 };

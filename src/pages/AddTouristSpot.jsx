@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 import useAuth from "../hooks/useAuth";
 
 
@@ -21,6 +22,22 @@ const AddTouristSpot = () => {
       
       const spotInfo = {spotName, imageURL, country, location,avgCost, seasonality,travelTime, totalVisitors, shortDescription, email,  name }
       console.log(spotInfo);
+      fetch('http://localhost:5000/spots', {
+        method: "POST",
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(spotInfo)
+      })
+      .then(res=>res.json())
+      .then(()=>{
+        Swal.fire({
+            title: "Congratulations",
+            text: "You have added a new tourist spot",
+            icon: "success"
+          });
+          form.reset()
+      })
   
      
   
@@ -155,7 +172,7 @@ const AddTouristSpot = () => {
                 </label>
                 <input
                   className="w-full p-2 border rounded-md focus:outline-[#FA7436]"
-                  type="number"
+                  type="text"
                   placeholder="Enter visitors total"
                   id=""
                   name="visitors"

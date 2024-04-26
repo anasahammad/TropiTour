@@ -28,7 +28,7 @@ const Navbar = () => {
 			<h1 className="text-2xl font-bold"><span className="text-[#FA7436]">Tropi</span>Tour</h1>
 		</Link>
 		<nav className="header-links md:contents font-medium text-base  hidden ">
-          <ul className="flex gap-8 items-center ml-4 xl:ml-8 mr-auto w-full justify-center dark:text-white">
+          <ul className="flex gap-8 md:gap-4 items-center ml-4 xl:ml-8 mr-auto w-full justify-center dark:text-white">
             <li>
               <NavLink
                 to="/"
@@ -95,7 +95,10 @@ const Navbar = () => {
   <svg className="col-start-1 row-start-1 stroke-base-100 fill-base-100" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
   <svg className="col-start-2 row-start-1 stroke-base-100 fill-base-100" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
 </label>
+<Link to="/register">
+
 			<button className="self-center px-8 py-3 font-semibold rounded dark:bg-violet-600 dark:text-gray-50">Sign up</button>
+</Link>
 		</div>
 		<button className="p-4 md:hidden lg:hidden">
 			

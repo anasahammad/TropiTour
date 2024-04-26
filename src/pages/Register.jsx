@@ -102,12 +102,10 @@ const Register = () => {
           <span className="absolute right-5 top-12" onClick={()=>setShow(!show)}>
             {!show ? <FaEyeSlash/> : <FaEye/>}
           </span>
-          <label className="label">
-            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-          </label>
+         
         </div>
         <div className="form-control mt-6">
-          <button className="btn bg-[#FA7436] text-white">Login</button>
+          <button className="btn bg-[#FA7436] text-white">Sign Up</button>
         </div>
         <p className="px-6 text-sm text-center dark:text-gray-600">Already have an account? 
 				<a rel="noopener noreferrer" href="#" className="hover:underline text-[#FA7436]">Sign in</a>.

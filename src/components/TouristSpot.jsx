@@ -31,7 +31,7 @@ const TouristSpot = () => {
         <h1 className="text-3xl font-bold ">Phi Phi Islands</h1>
     </div>
     <div className="flex justify-between">
-    <div className="flex items-center   text-xl">
+    <div className="flex items-center  text-xl">
         <IoLocationSharp/>
         <h3>Cox's Bazar</h3>
    </div>
@@ -43,7 +43,7 @@ const TouristSpot = () => {
     </div>
 
         <div className="flex justify-between">
-            <h1 className="text-2xl text-[#FA7436] font-bold">$5000/avg</h1>
+            <h1 className="text-3xl text-[#FA7436] font-bold">$5000/avg</h1>
             <div className="flex items-center gap-2 text-[#7D7D7D] text-xl ">
                 <TbCalendarTime/>
                 <h2 >Summer</h2>

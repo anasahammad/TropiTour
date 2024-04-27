@@ -12,6 +12,7 @@ import Register from "../pages/Register";
 import SpotDetails from "../components/SpotDetails";
 import UpdateSpot from "../components/UpdateSpot";
 import Countries from "../components/Countries";
+import SpotByCountry from "../components/SpotByCountry";
 
   export const router = createBrowserRouter([ 
     { 
@@ -51,6 +52,11 @@ import Countries from "../components/Countries";
             path:"/spots-update/:id",
             element: <UpdateSpot/>,
             loader: ({params})=> fetch(`http://localhost:5000/spots/${params.id}`)
+        },
+        {
+            path: "/countries/:countryName",
+            element: <SpotByCountry/>
+           
         }
     ]
     }, 

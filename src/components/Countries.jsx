@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { FcGlobe } from "react-icons/fc";
+import { Link } from "react-router-dom";
 
 const Countries = () => {
     const [countries, setCountries] = useState([])
@@ -11,7 +12,7 @@ const Countries = () => {
             setCountries(data)
         })
     }, [])
-    console.log(countries);
+    // console.log(countries);
     return (
         <div className="my-12 font-poppins">
             <div className="flex flex-col mb-10">
@@ -30,8 +31,11 @@ const Countries = () => {
                         <p className="dark:text-gray-800">{country.description}</p>
                     </div>
                     <div className="flex-grow">
-                    <button type="button" className="flex btn items-center justify-center w-full p-3 font-semibold tracking-wide  rounded-md bg-[#4086F4]  text-white
+                        <Link to={`/countries/${country.countryName}`}>
+                        <button type="button" className="flex btn items-center justify-center w-full p-3 font-semibold tracking-wide  rounded-md bg-[#4086F4]  text-white
                     dark:bg-violet-600 dark:text-gray-50">See Tourist Spot</button>
+                        </Link>
+                    
                     </div>
                   
                 </div>

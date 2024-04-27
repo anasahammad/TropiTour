@@ -7,7 +7,7 @@ const Slide3 = () => {
 <div className="hero-content  relative">
  <div className="max-w-3xl mx-auto">
    <h1 className="mb-5 text-white font-poppins text-3xl md:text-4xl lg:text-5xl font-bold">Adventure awaits around every corner!</h1>
-   <div className="absolute   bg-red-300">
+   <div className="absolute text-white  bg-red-300">
      <div className="flex ">
          <div className="border border-r-slate-50">
          <select className="select select-ghost w-full max-w-xs">

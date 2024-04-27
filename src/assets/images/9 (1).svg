@@ -1,0 +1,33 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="32" height="32" fill="#F5F5F5"/>
+<g id="Travel agency" clip-path="url(#clip0_0_1)">
+<rect width="1920" height="7360" transform="translate(-1165 -3968)" fill="#FEFCFB"/>
+<g id="BG Element">
+</g>
+<g id="Why Choose Us">
+<g id="Feature">
+<g id="Line">
+</g>
+<g id="2">
+<g id="Icon">
+<rect id="bg" x="-14" y="-14" width="60" height="60" rx="3" fill="#FA7436"/>
+<g id="9">
+<g id="Group">
+<path id="Vector" d="M18.3867 11.5871C18.3867 11.5871 17.0267 10.3871 14.64 11.2271C12.44 11.9871 12.5467 15.0005 15.88 15.8005" stroke="white" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M13.1599 19.9601C13.1599 19.9601 14.5199 21.1601 16.9066 20.3201C19.1199 19.5467 19.0132 16.5334 15.6666 15.7334" stroke="white" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M16.0134 10.9336V8.97363" stroke="white" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M16.0134 22.5733V20.6133" stroke="white" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="Vector_5" d="M15.7732 28.0801C22.57 28.0801 28.0799 22.5702 28.0799 15.7735C28.0799 8.97668 22.57 3.4668 15.7732 3.4668C8.97643 3.4668 3.46655 8.97668 3.46655 15.7735C3.46655 22.5702 8.97643 28.0801 15.7732 28.0801Z" stroke="white" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_1">
+<rect width="1920" height="7360" fill="white" transform="translate(-1165 -3968)"/>
+</clipPath>
+</defs>
+</svg>

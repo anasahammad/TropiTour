@@ -29,7 +29,7 @@ people</p>
 <div className="flex gap-4 items-center mt-8">
 <img alt="" className="w-12 h-12 border rounded-full dark:bg-gray-500 dark:border-gray-300" src={person1} />
 <div>
-        <h4 className="font-medium font-poppins">Benjamin Robert</h4>
+        <h4 className="font-medium font-poppins">Benjamin</h4>
         <div className="rating">
   <input type="radio" name="rating-2" className="mask mask-star-2 h-4 bg-orange-400" />
   <input type="radio" name="rating-2" className="mask mask-star-2 h-4 bg-orange-400"  />

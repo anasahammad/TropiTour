@@ -11,6 +11,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import SpotDetails from "../components/SpotDetails";
 import UpdateSpot from "../components/UpdateSpot";
+import Countries from "../components/Countries";
 
   export const router = createBrowserRouter([ 
     { 

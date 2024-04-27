@@ -16,7 +16,7 @@ const MyList = () => {
             setList(data)
         })
     }, [user])
-    console.log(list);
+    // console.log(list);
 
 
     const handleDelete = id=>{

@@ -1,14 +1,17 @@
 import Swal from "sweetalert2";
 import useAuth from "../hooks/useAuth";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 
 const UpdateSpot = () => {
    
    const {user} = useAuth() || {}
+  const navigate = useNavigate()
   
-    const handleUpdate = event =>{
+  
+    const handleUpdate = (event) =>{
         event.preventDefault();
         const form = event.target;
         const spotName = form.spotName.value;
@@ -20,7 +23,8 @@ const UpdateSpot = () => {
         const travelTime = form.time.value;
         const totalVisitors = form.visitors.value;
         const shortDescription = form.description.value;
-        const updateInfo = {spotName, imageURL, country, location,avgCost, seasonality,travelTime, totalVisitors, shortDescription }
+        const email = user?.email;
+        const updateInfo = {spotName, imageURL, country, location,avgCost, seasonality,travelTime, totalVisitors, shortDescription, email }
 
         fetch(`http://localhost:5000/myList/${user?.email}`,{
             method: "PATCH",
@@ -36,7 +40,7 @@ const UpdateSpot = () => {
                 text: "You Updated the tourist spot!",
                 icon: "success"
               });
-              
+             navigate("/myList");
         })
        
     }
@@ -67,6 +71,7 @@ const UpdateSpot = () => {
                   placeholder="Enter the spot name"
                   id=""
                   name="spotName"
+                  
                 />
   
                 <label
@@ -82,22 +87,23 @@ const UpdateSpot = () => {
                   type="text"
                   placeholder="Select a country"
                 >
-                  <option value="Bangladesh" selected>
+                  <option selected disabled value="Select Country">Select a Country</option>
+                  <option value="Bangladesh" >
                    Bangladesh
                   </option>
-                  <option value="Thailand" selected>
+                  <option value="Thailand" >
                   Thailand
                   </option>
-                  <option value="Indonesia" selected>
+                  <option value="Indonesia" >
                   Indonesia
                   </option>
-                  <option value="Malaysia" selected>
+                  <option value="Malaysia" >
                   Malaysia
                   </option>
-                  <option value="Vietnam" selected>
+                  <option value="Vietnam" >
                   Vietnam
                   </option>
-                  <option value="Cambodia" selected>
+                  <option value="Cambodia" >
                   Cambodia
                   </option>
                 </select>
@@ -185,7 +191,7 @@ const UpdateSpot = () => {
             <input
               className="px-4 w-full py-2 mt-4 rounded hover:bg-[#FA7436]  bg-[#FA7436] duration-200 text-white cursor-pointer font-semibold"
               type="submit"
-              value="Add Spot"
+              value="Update the Spot"
             />
           </form>
         </div>

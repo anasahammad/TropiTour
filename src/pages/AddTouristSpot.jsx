@@ -89,22 +89,23 @@ const AddTouristSpot = () => {
                   type="text"
                   placeholder="Select a country"
                 >
-                  <option value="Bangladesh" selected>
+                  <option selected disabled value="Select Country">Select a Country</option>
+                  <option value="Bangladesh" >
                    Bangladesh
                   </option>
-                  <option value="Thailand" selected>
+                  <option value="Thailand" >
                   Thailand
                   </option>
-                  <option value="Indonesia" selected>
+                  <option value="Indonesia" >
                   Indonesia
                   </option>
-                  <option value="Malaysia" selected>
+                  <option value="Malaysia" >
                   Malaysia
                   </option>
-                  <option value="Vietnam" selected>
+                  <option value="Vietnam" >
                   Vietnam
                   </option>
-                  <option value="Cambodia" selected>
+                  <option value="Cambodia" >
                   Cambodia
                   </option>
                 </select>

@@ -30,7 +30,7 @@ const TouristSpot = () => {
                     <div className="card-body flex-grow">
                      
                   
-                      <div className="flex justify-between">
+                      <div className="flex flex-col md:flex-row justify-between">
                           <div className="text-lg flex items-center gap-2 text-[#7D7D7D]">
                               <HiOutlineCalendarDays/>
                               <h4>{spot?.travelTime}</h4>

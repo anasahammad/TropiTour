@@ -74,7 +74,7 @@ const MyList = () => {
           });
     }
     return (
-        <div>
+        <div className="mb-16">
             
             
             <div className="container p-2 mx-auto sm:p-4 dark:text-gray-800">

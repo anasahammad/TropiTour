@@ -20,7 +20,7 @@ import 'swiper/css/pagination';
 
 
 
-import { Pagination } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 
 const WhyChoseUs = () => {
     return (
@@ -65,6 +65,11 @@ const WhyChoseUs = () => {
         pagination={{
           clickable: true,
         }}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
+        loop={true}
         breakpoints={{
           640: {
             slidesPerView: 2,
@@ -79,7 +84,7 @@ const WhyChoseUs = () => {
             spaceBetween: 30,
           },
         }}
-        modules={[Pagination]}
+        modules={[Pagination, Autoplay]}
         className="mySwiper"
       >
 

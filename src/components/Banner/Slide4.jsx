@@ -6,7 +6,7 @@ const Slide4 = () => {
             <div className="hero min-h-screen" style={{backgroundImage: `url(${slide4Img})`}}>
 <div className="hero-overlay opacity-60"></div>
 <div className="hero-content  relative">
- <div className="max-w-3xl mx-auto">
+ <div className="max-w-3xl text-left">
    <h1 className="mb-5 text-white font-poppins text-3xl md:text-4xl lg:text-5xl font-bold">Explore the world's wonders today!</h1>
    <div className="absolute text-white  bg-red-300">
      <div className="flex ">

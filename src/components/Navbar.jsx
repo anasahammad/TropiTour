@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import { Tooltip } from 'react-tooltip'
+import Swal from "sweetalert2";
 
 
 const Navbar = () => {
@@ -32,7 +33,11 @@ const Navbar = () => {
     const handleSignOut = ()=>{
       signOutUser()
       .then(()=>{
-        // toast.success("Sign Out successfull")
+        Swal.fire({
+          title: "Congratulations!",
+          text: "Sign Out Successful",
+          icon: "success"
+        });
       })
      }
     return (

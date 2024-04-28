@@ -45,12 +45,12 @@ const TouristSpot = () => {
                           <h1 className="text-3xl font-bold ">{spot?.spotName}</h1>
                       </div>
                       <div className="flex justify-between">
-                      <div className="flex items-center  text-xl">
+                      <div className="flex items-center  text-base">
                           <IoLocationSharp/>
                           <h3>{spot?.location}</h3>
                      </div>
                   
-                     <div className="flex items-center gap-2 text-lg">
+                     <div className="flex items-center gap-2 text-base">
                       <FaGlobeAmericas/>
                       <h1>{spot?.country}</h1>
                      </div>

@@ -23,7 +23,7 @@ const AllTouristSpot = () => {
         }
     }
     return (
-        <div className="spotContainer">
+        <div className="spotContainer mb-16">
 
 <div className="text-center my-8">
 <select onChange={handleSort}  className="select select-ghost w-full max-w-xs border-2  border-red-600 focus:border-[#FA7436]">

@@ -5,7 +5,9 @@ const SpotByCountry = () => {
     const [allData, setAllData] = useState()
     const {countryName} = useParams()
     console.log(countryName);
-    
+    // useEffect(()=>{
+    //     fetch(`http://localhost:5000/spots/${}`)
+    // }, [])
     return (
         <div>
             

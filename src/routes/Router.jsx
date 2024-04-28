@@ -13,11 +13,13 @@ import SpotDetails from "../components/SpotDetails";
 import UpdateSpot from "../components/UpdateSpot";
 import Countries from "../components/Countries";
 import SpotByCountry from "../components/SpotByCountry";
+import ErrorPage from "../pages/ErrorPage";
 
   export const router = createBrowserRouter([ 
     { 
     path: "/", 
     element: <Root/>, 
+    errorElement: <ErrorPage/>,
     children: [
         {
             path: "/",

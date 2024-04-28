@@ -4,9 +4,11 @@ import { GrEdit } from "react-icons/gr";
 import { RiDeleteBinFill } from "react-icons/ri";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import Lottie from "lottie-react";
 
+import nodata from "../assets/myList.json"
 const MyList = () => {
-    const {user}= useAuth() || {}
+    const {user, loading, setLoading}= useAuth() || {}
     const [list, setList] = useState([])
 
     useEffect(()=>{
@@ -14,8 +16,9 @@ const MyList = () => {
         .then(res=>res.json())
         .then(data=>{
             setList(data)
+            setLoading(true)
         })
-    }, [user])
+    }, [user, setLoading])
     // console.log(list);
 
 
@@ -76,8 +79,9 @@ const MyList = () => {
     return (
         <div className="mb-16">
             
-            
-            <div className="container p-2 mx-auto sm:p-4 dark:text-gray-800">
+            {list.length===0 & !loading ?  <div className="h-screen flex justify-center ">
+            <Lottie className="w-[200px] md:w-[350px]" loop={true} animationData={nodata} />
+            </div> : <div className="container p-2 mx-auto sm:p-4 dark:text-gray-800">
 	<h2 className="mb-4 text-2xl font-semibold leading-tight text-center">My Tourist Spot  summary</h2>
 	<div className="overflow-x-auto">
 		<table className="w-full p-6 text-xs text-left whitespace-nowrap">
@@ -130,7 +134,8 @@ const MyList = () => {
 			
 		</table>
 	</div>
-</div>
+</div> }
+            
         </div>
     );
 };

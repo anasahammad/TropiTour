@@ -4,15 +4,17 @@ import { MdPeopleOutline } from "react-icons/md";
 import loadingImg from "../assets/images/images.png"
 import { TbCalendarTime } from "react-icons/tb";
 import { Link } from "react-router-dom";
+import useAuth from "../hooks/useAuth";
 
 const AllTouristSpot = () => {
     const [allSpots, setAllSpots] = useState([])
-
+    const {setLoading} = useAuth() || {}
     useEffect(()=>{
         fetch('http://localhost:5000/spots')
         .then(res=> res.json())
         .then(data=> {
             setAllSpots(data)
+            setLoading(true)
         })
     }, [])
 

@@ -14,6 +14,7 @@ import UpdateSpot from "../components/UpdateSpot";
 import Countries from "../components/Countries";
 import SpotByCountry from "../components/SpotByCountry";
 import ErrorPage from "../pages/ErrorPage";
+import PrivateRoutes from "../components/privateroutes/PrivateRoutes";
 
   export const router = createBrowserRouter([ 
     { 
@@ -31,11 +32,11 @@ import ErrorPage from "../pages/ErrorPage";
         },
         {
             path: "/add-tourist-spot",
-            element: <AddTouristSpot/>
+            element:<PrivateRoutes><AddTouristSpot/></PrivateRoutes> 
         },
         {
             path: "/myList",
-            element: <MyList/>
+            element:<PrivateRoutes><MyList/></PrivateRoutes> 
         },
         {
             path: "/login",
@@ -47,7 +48,7 @@ import ErrorPage from "../pages/ErrorPage";
         },
         {
             path: "/spot-details/:id",
-            element: <SpotDetails/>,
+            element:<PrivateRoutes><SpotDetails/></PrivateRoutes> ,
             loader: ({params})=> fetch(`http://localhost:5000/spots/${params.id}`)
         },
         {

@@ -1,15 +1,18 @@
 import { useEffect, useState } from "react";
 import { FcGlobe } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import useAuth from "../hooks/useAuth";
 
 const Countries = () => {
     const [countries, setCountries] = useState([])
+    const {setLoading} = useAuth() || {}
 
     useEffect(()=>{
         fetch('http://localhost:5000/countries')
         .then(res=> res.json())
         .then(data=> {
             setCountries(data)
+            setLoading(true)
         })
     }, [])
     // console.log(countries);

@@ -2,17 +2,18 @@ import { useEffect, useState } from "react";
 import { FaGlobeAmericas } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import { TbCalendarTime } from "react-icons/tb";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { Link,  useParams } from "react-router-dom";
 
 const SpotByCountry = () => {
     const [allData, setAllData] = useState()
-    const {countryName} = useParams()
+    const {countryName, setLoading} = useParams()
     console.log(countryName);
     useEffect(()=>{
         fetch(`http://localhost:5000/spots`)
         .then(res=> res.json())
         .then(data=> {
             setAllData(data)
+            setLoading(true)
         })
     }, [])
 

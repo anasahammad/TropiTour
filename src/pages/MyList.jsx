@@ -8,7 +8,7 @@ import Lottie from "lottie-react";
 
 import nodata from "../assets/myList.json"
 const MyList = () => {
-    const {user, loading, setLoading}= useAuth() || {}
+    const {user, loading}= useAuth() || {}
     const [list, setList] = useState([])
 
     useEffect(()=>{
@@ -16,9 +16,9 @@ const MyList = () => {
         .then(res=>res.json())
         .then(data=>{
             setList(data)
-            setLoading(true)
+            
         })
-    }, [user, setLoading])
+    }, [user])
     // console.log(list);
 
 

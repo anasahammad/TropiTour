@@ -3,12 +3,12 @@ import { FaGlobeAmericas } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import { MdPeopleOutline } from "react-icons/md";
 import { Link, useParams } from "react-router-dom";
-import useAuth from "../hooks/useAuth";
+
 
 const SpotDetails = () => {
     const {id} = useParams()
     // console.log(id);
-	const {setLoading} = useAuth() || {}
+	
     const [allSpots, setAllSpots] = useState([])
 
     useEffect(()=>{
@@ -16,7 +16,7 @@ const SpotDetails = () => {
         .then(res=> res.json())
         .then(data=> {
             setAllSpots(data)
-			setLoading(true)
+			
         })
     }, [])
 

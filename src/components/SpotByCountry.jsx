@@ -6,14 +6,14 @@ import { Link,  useParams } from "react-router-dom";
 
 const SpotByCountry = () => {
     const [allData, setAllData] = useState()
-    const {countryName, setLoading} = useParams()
+    const {countryName} = useParams()
     console.log(countryName);
     useEffect(()=>{
         fetch(`http://localhost:5000/spots`)
         .then(res=> res.json())
         .then(data=> {
             setAllData(data)
-            setLoading(true)
+          
         })
     }, [])
 

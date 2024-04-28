@@ -52,6 +52,7 @@ const Navbar = () => {
       <NavLink  to="/myList"  className={({isActive})=> isActive ? "text-[#FA7436] font-bold" : ""  }>My List</NavLink> 
    
      </>
+     
     return (
       <div className="navbar font-poppins bg-base-200 lg:py-6 lg:px-6">
       <div className="navbar-start">
@@ -94,11 +95,15 @@ const Navbar = () => {
   <svg className="col-start-2 row-start-1 stroke-base-100 fill-base-100" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
 </label>
      {loading ? <div><span className="loading loading-ring loading-lg"></span></div> : (user ) ? <div className="dropdown dropdown-end relative">
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar tooltip tooltip-warning   tooltip-left"    data-tip={user?.displayName} onClick={handleIsOpen}>
+      
+     
+      <a className="my-anchor-element">
+      <Tooltip anchorSelect=".my-anchor-element" place="top">{user?.displayName}</Tooltip>
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar"  onClick={handleIsOpen}>
             <div className="w-10 rounded-full">
               <img alt="Tailwind CSS Navbar component" src={user?.photoURL ? user.photoURL : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
             </div>
-          </div>
+          </div></a>
           <ul tabIndex={0} className={`menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-40 md:w-60 lg:w-60 absolute top-full  ${
               isOpen ? '' : 'hidden'
             }`}>

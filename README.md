@@ -1,6 +1,6 @@
 # TropiTour - Explore Southeast Asia
 
-Live Site URL: [TropiTour](#) (replace "#" with your actual URL)
+Live Site URL: [TropiTour](https://tropitour-b6096.web.app/) 
 
 ## Features:
 - **Comprehensive Southeast Asia Tourism Information**: TropiTour provides a curated list of tourist spots across Southeast Asia, allowing users to discover hidden gems and popular destinations in the region.
@@ -16,3 +16,4 @@ Live Site URL: [TropiTour](#) (replace "#" with your actual URL)
 - **react-tooltip**
 - **swiper-js**
 - **sweetalert2**
+- **aos-animation**

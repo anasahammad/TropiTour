@@ -27,7 +27,7 @@ const WhyChoseUs = () => {
         <div className="my-20">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="flex   flex-col">
-            <h1 className="text-3xl md:text-4xl lg:text-4xl ligth:text-[#222] font-bold dark:text-white">Why <span className="text-[#FA7436]">Choose</span> Us</h1>
+            <h1 className="text-3xl md:text-4xl lg:text-4xl  font-bold ">Why <span className="text-[#FA7436]">Choose</span> Us</h1>
             <p className="my-3">We ensure that you’ll embark on a perfectly planned, safe vacation at a price you can afford.</p>
             <div>
             <button className="btn btn-outline btn-error">Learn More</button>

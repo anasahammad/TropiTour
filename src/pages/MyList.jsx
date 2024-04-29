@@ -106,14 +106,14 @@ const MyList = () => {
 				</tr>
 			</thead>
             {
-                list?.map((item, idx)=><tbody key={idx} className="border-b dark:bg-gray-50 dark:border-gray-300">
+                list?.map((item, idx)=><tbody key={idx} className="border-b dark:border-gray-300">
 				<tr>
-					<td className="px-3 lg:text-xl dark:text-gray-600">{item.spotName}</td>
+					<td className="px-3 lg:text-xl">{item.spotName}</td>
 					<td className="px-3 py-2">
 						<p>{item.country}</p>
 					</td>
 					<td className="px-3 py-2">
-						<p className="dark:text-gray-600">{item.location}</p>
+						<p className="">{item.location}</p>
 					</td>
 					<td className="px-3 py-2">
 						<p>${item.avgCost}</p>
@@ -122,7 +122,7 @@ const MyList = () => {
 						<Link to={`/spots-update/${item._id}`} className="cursor-pointer text-xl"><GrEdit/></Link>
 					</td>
 					<td className="px-3 py-2">
-						<button onClick={()=>handleDelete(item._id)} className="dark:text-gray-600 text-xl text-red-500 cursor-pointer"><RiDeleteBinFill/></button>
+						<button onClick={()=>handleDelete(item._id)} className=" text-xl text-red-500 cursor-pointer"><RiDeleteBinFill/></button>
 					</td>
 					
 				</tr>

@@ -36,7 +36,7 @@ const AllTouristSpot = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                 {
-                    allSpots.map(spot=><div key={spot?._id} className="max-w-xs p-6 rounded-md shadow-md dark:bg-gray-50 dark:text-gray-900">
+                    allSpots.map(spot=><div key={spot?._id} className="max-w-xs mx-auto p-6 rounded-md shadow-md  ">
                     <img src={spot?.imageURL} alt={spot?.spotName} className="object-cover object-center w-full rounded-md h-72 dark:bg-gray-500" />
                     <div className="mt-6 mb-2">
                         

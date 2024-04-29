@@ -28,6 +28,7 @@ const Login = () => {
                 text: "Sign in Successful",
                 icon: "success"
               });
+              navigate(from)
         })
         .catch(error=> {
             Swal.fire({

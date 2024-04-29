@@ -79,7 +79,7 @@ const MyList = () => {
     return (
         <div className="mb-16">
             
-            {list.length===0 & !loading ?  <div className="h-screen flex justify-center ">
+            {list.length === 0 & !loading ?  <div className="h-screen flex justify-center ">
             <Lottie className="w-[200px] md:w-[350px]" loop={true} animationData={nodata} />
             </div> : <div className="container p-2 mx-auto sm:p-4 dark:text-gray-800">
 	<h2 className="mb-4 text-2xl font-semibold leading-tight text-center">My Tourist Spot  summary</h2>
@@ -106,7 +106,7 @@ const MyList = () => {
 				</tr>
 			</thead>
             {
-                list.map((item, idx)=><tbody key={idx} className="border-b dark:bg-gray-50 dark:border-gray-300">
+                list?.map((item, idx)=><tbody key={idx} className="border-b dark:bg-gray-50 dark:border-gray-300">
 				<tr>
 					<td className="px-3 lg:text-xl dark:text-gray-600">{item.spotName}</td>
 					<td className="px-3 py-2">

@@ -98,7 +98,7 @@ const Navbar = () => {
       
      
       <a className="my-anchor-element">
-      <Tooltip anchorSelect=".my-anchor-element" place="top">{user?.displayName}</Tooltip>
+      <Tooltip className="z-[10]" anchorSelect=".my-anchor-element" place="left">{user?.displayName}</Tooltip>
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar"  onClick={handleIsOpen}>
             <div className="w-10 rounded-full">
               <img alt="Tailwind CSS Navbar component" src={user?.photoURL ? user.photoURL : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />

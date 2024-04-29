@@ -16,7 +16,7 @@ const AllTouristSpot = () => {
             setAllSpots(data)
             setLoading(true)
         })
-    }, [])
+    }, [setLoading])
 
     const handleSort = (e)=>{
         if(e.target.value === "avgCost" ){
@@ -30,7 +30,7 @@ const AllTouristSpot = () => {
 <div className="text-center my-8">
 <select onChange={handleSort}  className="select select-ghost w-full max-w-xs border-2  border-red-600 focus:border-[#FA7436]">
   <option disabled selected>Find a Spot by avarage low cost</option>
-  <option value="avgCost">Avarage Cost</option>
+  <option value="avgCost">Avarage Low Cost</option>
   
 </select>
             </div>

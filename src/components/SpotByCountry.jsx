@@ -20,7 +20,7 @@ const SpotByCountry = () => {
     const filterData = allData?.filter(item=> item.country=== countryName)
     
     return (
-        <div className="spotContainer">
+        <div className="spotContainer my-6">
            
             <div className="flex flex-col justify-center items-center">
             <h1 className="text-3xl md:text-4xl lg:text-4xl ligth:text-[#222] font-bold dark:text-white">All Tourist Spots of <span className="text-[#FA7436]">{countryName}</span></h1>
@@ -30,10 +30,10 @@ const SpotByCountry = () => {
             
             <div className="grid my-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 ">
                 {
-                    filterData?.map(item=> <div key={item._id} className="max-w-xs flex flex-col  rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
+                    filterData?.map(item=> <div key={item._id} className="max-w-xs  flex flex-col  rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
                     <img src={item.imageURL} alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500" />
-                    <div className="flex flex-col justify-between p-4 space-y-8">
-                        <div className="space-y-2 flex-grow">
+                    <div className="flex  flex-col justify-between p-4 space-y-8">
+                        <div className="h-[80px] ">
                             <h2 className="text-2xl font-semibold tracking-wide ">{item.spotName}</h2>
                             <p className="dark:text-gray-800">{item.shortDescription?.slice(0, 100)}</p>
                         </div>

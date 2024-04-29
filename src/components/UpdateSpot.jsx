@@ -172,7 +172,7 @@ const UpdateSpot = () => {
                 <input
                   className="w-full p-2 border rounded-md focus:outline-[#FA7436]"
                   type="text"
-                  placeholder="Enter visitors total"
+                  placeholder="Enter total visitors/year"
                   id=""
                   name="visitors"
                 />

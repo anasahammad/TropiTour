@@ -48,7 +48,7 @@ const AddTouristSpot = () => {
     };
   
     return (
-        <div className="spotContainer mb-16 pt-10">
+        <div data-aos="fade-down" data-aos-duration="500" className="spotContainer mb-16 pt-10">
         <div className="shadow-lg p-5 border ">
          
           <div className="mt-5 mb-8">

@@ -10,7 +10,7 @@ const TouristSpot = () => {
     const [allSpots, setAllSpots] = useState([])
   
     useEffect(()=>{
-        fetch('http://localhost:5000/spots')
+        fetch('https://tropi-tour-server.vercel.app/spots')
         .then(res=> res.json())
         .then(data=> {
             setAllSpots(data)

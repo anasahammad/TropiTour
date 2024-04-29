@@ -13,8 +13,7 @@ import walmart from "../assets/icons/Walmart Logo.svg"
 
 const Testimonial = () => {
     return (
-        <div className="bg-[
-            #CCCCCC] my-20">
+        <div className=" my-20">
             <div className="flex flex-col justify-center items-center">
                 <h1 className="text-3xl md:text-4xl lg:text-4xl ligth:text-[#222] font-bold dark:text-white">See What Our <span className="text-[#FA7436]">Clients Say</span> About Us</h1>
             </div>
@@ -116,7 +115,7 @@ and also affordable and most easy with browsing.</p>
 
             <section className="p-6 my-10 dark:bg-gray-100 dark:text-gray-800">
 	<div className="container p-4 mx-auto text-center">
-		<h2 className="text-3xl md:text-4xl lg:text-5xl ligth:text-[#222] font-bold dark:text-white"><span className="text-[#FA7436]">Trusted by</span> the industry leaders </h2>
+		<h2 className="text-3xl md:text-4xl lg:text-5xl light:text-[#222] font-bold dark:text-white"><span className="text-[#FA7436]">Trusted by</span> the industry leaders </h2>
 	</div>
 	<div className="container flex flex-wrap justify-center mx-auto dark:text-gray-600">
 		<div className="flex justify-center w-1/2 p-6 align-middle md:w-1/3 xl:w-1/4">

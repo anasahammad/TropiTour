@@ -26,7 +26,7 @@ const UpdateSpot = () => {
         const email = user?.email;
         const updateInfo = {spotName, imageURL, country, location,avgCost, seasonality,travelTime, totalVisitors, shortDescription, email }
 
-        fetch(`http://localhost:5000/myList/${user?.email}`,{
+        fetch(`https://tropi-tour-server.vercel.app/myList/${user?.email}`,{
             method: "PATCH",
             headers: {
                 'content-type': 'application/json'

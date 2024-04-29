@@ -22,7 +22,7 @@ const AddTouristSpot = () => {
       
       const spotInfo = {spotName, imageURL, country, location,avgCost, seasonality,travelTime, totalVisitors, shortDescription, email,  name }
       console.log(spotInfo);
-      fetch('http://localhost:5000/spots', {
+      fetch('https://tropi-tour-server.vercel.app/spots', {
         method: "POST",
         headers: {
             'content-type': 'application/json'

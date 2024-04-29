@@ -12,7 +12,7 @@ const MyList = () => {
     const [list, setList] = useState([])
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/myList/${user?.email}`,)
+        fetch(`https://tropi-tour-server.vercel.app/myList/${user?.email}`,)
         .then(res=>res.json())
         .then(data=>{
             setList(data)
@@ -40,7 +40,7 @@ const MyList = () => {
             reverseButtons: true
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/myList/${id}`, {
+                fetch(`https://tropi-tour-server-njjb2m7jf-anas-ahammads-projects.vercel.app//myList/${id}`, {
                     method: "DELETE"
                 })
                 .then(res=>res.json())

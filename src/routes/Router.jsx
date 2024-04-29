@@ -49,12 +49,12 @@ import PrivateRoutes from "../components/privateroutes/PrivateRoutes";
         {
             path: "/spot-details/:id",
             element:<PrivateRoutes><SpotDetails/></PrivateRoutes> ,
-            loader: ({params})=> fetch(`http://localhost:5000/spots/${params.id}`)
+            loader: ({params})=> fetch(`https://tropi-tour-server.vercel.app/spots/${params.id}`)
         },
         {
             path:"/spots-update/:id",
             element: <UpdateSpot/>,
-            loader: ({params})=> fetch(`http://localhost:5000/spots/${params.id}`)
+            loader: ({params})=> fetch(`https://tropi-tour-server.vercel.app/spots/${params.id}`)
         },
         {
             path: "/countries/:countryName",

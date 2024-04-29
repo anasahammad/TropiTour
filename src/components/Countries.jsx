@@ -8,7 +8,7 @@ const Countries = () => {
    
 
     useEffect(()=>{
-        fetch('http://localhost:5000/countries')
+        fetch('https://tropi-tour-server.vercel.app/countries')
         .then(res=> res.json())
         .then(data=> {
             setCountries(data)
@@ -27,7 +27,7 @@ const Countries = () => {
 
             {
                 countries.map(country=> <div data-aos="fade-up-right"
-                 key={country._id} className="max-w-xs flex flex-col  rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
+                 key={country._id} className="max-w-xs flex flex-col  rounded-md shadow-md  dark:text-gray-800">
                 <img src={country.imageUrl} alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500" />
                 <div className="flex flex-col justify-between p-4 space-y-8">
                     <div className="space-y-2 flex-grow">

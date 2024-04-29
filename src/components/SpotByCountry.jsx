@@ -9,7 +9,7 @@ const SpotByCountry = () => {
     const {countryName} = useParams()
     console.log(countryName);
     useEffect(()=>{
-        fetch(`http://localhost:5000/spots`)
+        fetch(`https://tropi-tour-server.vercel.app/spots`)
         .then(res=> res.json())
         .then(data=> {
             setAllData(data)

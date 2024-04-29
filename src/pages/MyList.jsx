@@ -40,7 +40,7 @@ const MyList = () => {
             reverseButtons: true
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://tropi-tour-server-njjb2m7jf-anas-ahammads-projects.vercel.app//myList/${id}`, {
+                fetch(`https://tropi-tour-server.vercel.app/myList/${id}`, {
                     method: "DELETE"
                 })
                 .then(res=>res.json())

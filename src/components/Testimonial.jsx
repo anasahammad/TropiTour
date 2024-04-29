@@ -46,7 +46,7 @@ people</p>
 </div>
 </div>
 
-                    <div className="max-w-xs p-6 rounded-md shadow-md dark:bg-gray-50 dark:text-gray-900">
+                    <div className="max-w-xs mx-auto p-6 rounded-md shadow-md ">
 	
 	
 	<p className="dark:text-gray-800">It's an amazing experience to be
@@ -68,7 +68,7 @@ thank you Oelinken</p>
 </div>
 </div>
 
-                    <div className="max-w-xs p-6 rounded-md shadow-md dark:bg-gray-50 dark:text-gray-900">
+                    <div className="max-w-xs mx-auto p-6 rounded-md shadow-md ">
 	
 	
 	<p className="dark:text-gray-800">At first I was lazy but that thought
@@ -90,7 +90,7 @@ by a pleasant guide</p>
 </div>
 </div>
 
-                    <div className="max-w-xs p-6 rounded-md shadow-md dark:bg-gray-50 dark:text-gray-900">
+                    <div className="max-w-xs mx-auto p-6 rounded-md shadow-md">
 	
 	
 	<p className="dark:text-gray-800">New story in my life, really amazing
@@ -115,7 +115,7 @@ and also affordable and most easy with browsing.</p>
 
             <section className="p-6 my-10  ">
 	<div className="container p-4 mx-auto text-center">
-		<h2 className="text-3xl md:text-4xl lg:text-5xl font-bold "><span className="text-[#FA7436]">Trusted by</span> the industry leaders </h2>
+		<h2 className=" text-4xl lg:text-5xl font-bold "><span className="text-[#FA7436]">Trusted by</span> the industry leaders </h2>
 	</div>
 	<div className="container flex flex-wrap justify-center mx-auto dark:text-gray-600">
 		<div className="flex justify-center w-1/2 p-6 align-middle md:w-1/3 xl:w-1/4">

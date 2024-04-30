@@ -20,14 +20,14 @@ const TouristSpot = () => {
     console.log(allSpots);
     return (
         <div className="my-16 ">
-            <div className="flex justify-center font-poppins">
-                <h1 data-aos="fade-right" className="text-3xl md:text-4xl lg:text-4xl ligth:text-[#222] font-bold dark:text-white">The <span className="text-[#FA7436]"> best tourist spot</span> for vacation</h1>
+            <div className="flex  justify-center font-poppins">
+                <h1 data-aos="fade-right" className="text-3xl md:text-4xl lg:text-4xl  font-bold dark:text-white">The <span className="text-[#FA7436]"> best tourist spot</span> for vacation</h1>
             </div>
 
-            <div  className="grid gap-4 my-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div  className="grid gap-3 my-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 
                 {
-                    allSpots.slice(0, 6).map(spot=><div data-aos="fade-up-left" key={spot._id} className="card  my-6 card-compact  bg-base-100 shadow-xl">
+                    allSpots.slice(0, 6).map(spot=><div data-aos="fade-up-left" key={spot._id} className="card overflow-x-hidden mx-auto my-6 card-compact  bg-base-100 shadow-xl">
                     <figure><img src={spot?.imageURL} alt={spot?.spotName} className="h-[313px]" /></figure>
                     <div className="card-body flex-grow">
                      

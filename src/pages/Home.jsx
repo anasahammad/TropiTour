@@ -6,7 +6,7 @@ import WhyChoseUs from "../components/WhyChoseUs";
 
 const Home = () => {
     return (
-        <div>
+        <div className="overflow-x-hidden">
             <Banner/>
             <div className="spotContainer mx-auto">
             <TouristSpot/>

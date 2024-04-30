@@ -27,8 +27,8 @@ const Countries = () => {
 
             {
                 countries.map(country=> <div data-aos="fade-up-right"
-                 key={country._id} className="max-w-xs mx-auto flex flex-col  rounded-md shadow-md  dark:text-gray-800">
-                <img src={country.imageUrl} alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500" />
+                 key={country._id} className="max-w-xs mx-auto flex flex-col  rounded-md shadow-md  ">
+                <img src={country.imageUrl} alt="" className="object-cover object-center w-full rounded-t-md h-72 " />
                 <div className="flex flex-col justify-between p-4 space-y-8">
                     <div className="space-y-2 flex-grow">
                         <h2 className="text-3xl font-semibold tracking-wide ">{country.countryName}</h2>
@@ -37,7 +37,7 @@ const Countries = () => {
                     <div className="flex-grow">
                         <Link to={`/countries/${country.countryName}`}>
                         <button type="button" className="flex btn items-center justify-center w-full p-3 font-semibold tracking-wide  rounded-md bg-[#4086F4]  text-white
-                    dark:bg-violet-600 dark:text-gray-50">See Tourist Spot</button>
+                     dark:text-gray-50">See Tourist Spot</button>
                         </Link>
                     
                     </div>

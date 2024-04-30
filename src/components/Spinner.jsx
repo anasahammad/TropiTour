@@ -2,7 +2,7 @@ import { Blocks } from "react-loader-spinner";
 
 const Spinner = () => {
     return (
-        <div className="flex justify-center items-center z-[10] mt-[10%]">
+        <div className=" inset-0  h-screen max-w-[1920px] flex justify-center items-center p-5">
             <Blocks
   height="80"
   width="80"

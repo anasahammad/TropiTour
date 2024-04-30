@@ -12,7 +12,7 @@ import 'swiper/css/pagination';
 
 const Banner = () => {
     return (
-        <div>
+        <div className="w-full overflow-hidden">
 <div>
 <Swiper
         spaceBetween={30}
@@ -32,7 +32,7 @@ const Banner = () => {
             disableOnInteraction: false,
           }}
         modules={[EffectFade, Autoplay, Pagination, Keyboard]}
-        className="mySwiper"
+        className="mySwiper "
       >
         <SwiperSlide> <Slide1/></SwiperSlide>
         <SwiperSlide>  <Slide2/></SwiperSlide>

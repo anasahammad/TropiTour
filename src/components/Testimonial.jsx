@@ -27,12 +27,12 @@ const Testimonial = () => {
                     <div className="max-w-xs p-6 mx-auto  rounded-md shadow-md">
 	
 	
-	<p className="dark:text-gray-800">Wow, what a fun vacation with
+	<p className="">Wow, what a fun vacation with
 Oelinken, guided by professional
 people</p>
 
 <div className="flex gap-4 items-center mt-8">
-<img alt="" className="w-12 h-12 border rounded-full dark:bg-gray-500 dark:border-gray-300" src={person1} />
+<img alt="" className="w-12 h-12 border rounded-full dark:bg-gray-500 " src={person1} />
 <div>
         <h4 className="font-medium font-poppins">Benjamin</h4>
         <div className="rating">
@@ -49,7 +49,7 @@ people</p>
                     <div className="max-w-xs mx-auto p-6 rounded-md shadow-md ">
 	
 	
-	<p className="dark:text-gray-800">It's an amazing experience to be
+	<p className="">It's an amazing experience to be
 able to vacation to a new place,
 thank you Oelinken</p>
 
@@ -71,7 +71,7 @@ thank you Oelinken</p>
                     <div className="max-w-xs mx-auto p-6 rounded-md shadow-md ">
 	
 	
-	<p className="dark:text-gray-800">At first I was lazy but that thought
+	<p className="">At first I was lazy but that thought
 disappeared after being accompanied
 by a pleasant guide</p>
 
@@ -93,7 +93,7 @@ by a pleasant guide</p>
                     <div className="max-w-xs mx-auto p-6 rounded-md shadow-md">
 	
 	
-	<p className="dark:text-gray-800">New story in my life, really amazing
+	<p className="">New story in my life, really amazing
 and also affordable and most easy with browsing.</p>
 
 <div className="flex gap-4 items-center mt-8">

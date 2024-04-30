@@ -32,7 +32,7 @@ const Countries = () => {
                 <div className="flex flex-col justify-between p-4 space-y-8">
                     <div className="space-y-2 flex-grow">
                         <h2 className="text-3xl font-semibold tracking-wide ">{country.countryName}</h2>
-                        <p className="dark:text-gray-800">{country.description}</p>
+                        <p className="">{country.description}</p>
                     </div>
                     <div className="flex-grow">
                         <Link to={`/countries/${country.countryName}`}>
